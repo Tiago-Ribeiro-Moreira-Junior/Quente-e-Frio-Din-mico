@@ -21,4 +21,4 @@ Este sketch simula um jogo de "quente ou frio", mas com um visual mais suave e u
 
 1. Clone ou baixe o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/Quente-e-Frio-Dinâmico.git
+   git clone https://github.com/seu-usuario/Quente-e-Frio-Dinamico.git
