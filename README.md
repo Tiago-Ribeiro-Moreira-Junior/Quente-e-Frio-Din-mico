@@ -1,24 +1,24 @@
-*🕵️‍♂️ Jogo:* Encontre o Ponto Oculto
-Este é um projeto simples feito com p5.js, onde o jogador deve encontrar um ponto oculto se guiando apenas pela distância visual. À medida que o ponteiro do mouse se aproxima do ponto, o círculo muda de tamanho.
+# 🎯 Jogo de Proximidade Interativa — p5.js
 
-*🔍 Como funciona?*
-Um ponto aleatório aparece na tela.
+Este projeto é uma experiência interativa simples usando p5.js, onde o jogador precisa encontrar um ponto escondido com base na **distância entre o cursor e o alvo**, representada por um círculo que muda de tamanho.
 
-A cada quadro, ele se move um pouco aleatoriamente.
+## 👀 O que ele faz?
 
-Um círculo é desenhado ao redor do ponteiro do mouse, com raio igual à distância até o ponto oculto.
+- Um **ponto aleatório** é gerado na tela.
+- Um **círculo** cresce ou encolhe com base na distância do mouse até esse ponto.
+- Quanto mais perto, **maior o círculo**.
+- Ao encontrar o ponto escondido, uma mensagem de sucesso aparece e o ponto é revelado.
 
-Quando o mouse chega muito perto do ponto (distância < 3 pixels), aparece a mensagem "Encontrei!" e o jogo para.
+## 🛠️ Tecnologias usadas
 
-*🚀 Como rodar*
+- [p5.js](https://p5js.org/) — biblioteca criativa de JavaScript para arte interativa
 
-✅ Usando o editor online do p5.js:
-Acesse: https://editor.p5js.org
+## 💡 Inspiração
 
-Cole o conteúdo de sketch.js no editor
+Este sketch simula um jogo de "quente ou frio", mas com um visual mais suave e um sistema de feedback visual baseado em proximidade.
 
-*Clique em ▶️ Run*
+## 🚀 Como usar
 
-*🛠️ Feito com*
-p5.js – Biblioteca JavaScript para arte generativa e interações visuais
-
+1. Clone ou baixe o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/Quente-e-Frio-Dinâmico.git
