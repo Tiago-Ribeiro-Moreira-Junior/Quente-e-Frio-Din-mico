@@ -1,27 +1,43 @@
-let x;
-let y;
+let x, y;
+let encontrado = false;
 
 function setup() {
   createCanvas(400, 400);
-  x = random(400);
-  x = int(x);
-  y = random(400);
-  y = int(y);
+  x = int(random(width));
+  y = int(random(height));
+  textAlign(CENTER, CENTER);
+  textSize(24);
+  noCursor();
 }
 
 function draw() {
-  background(220);
-  x = x + random(-5,5);
-  y = y + random(-5,5);
-  x = constrain(x,0,400);
-  y = constrain(y,0,400);
-  let distancia;
-  distancia = dist(mouseX, mouseY, x, y);
-  circle(mouseX, mouseY, distancia);
-  //circle(x, y, 10);
+  background("#FFF3E0");
 
-  if (distancia < 3) {
-    text("Encontrei!", 200, 200);
+  // Círculo que aumenta com a proximidade
+  let d = dist(mouseX, mouseY, x, y);
+  noStroke();
+  fill(255, 140, 0, 100); // laranja com transparência
+  circle(mouseX, mouseY, d * 2);
+
+  // Se encontrou o ponto
+  if (d < 5 && !encontrado) {
+    encontrado = true;
     noLoop();
+    drawFoundMessage();
   }
+
+  // Pontinho fixo aparece como recompensa depois de encontrar
+  if (encontrado) {
+    fill("#4CAF50");
+    noStroke();
+    circle(x, y, 10);
+  }
+}
+
+function drawFoundMessage() {
+  fill(60, 60, 60, 200);
+  rectMode(CENTER);
+  rect(width / 2, height / 2, 220, 60, 12);
+  fill(255);
+  text("🎉 Encontrei!", width / 2, height / 2);
 }
